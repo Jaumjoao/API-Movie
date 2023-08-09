@@ -1,8 +1,9 @@
-# React + Vite
+# Movie API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Repositório do Projeto Catálogo de Filmes em React
 
-Currently, two official plugins are available:
+### Este repositório contém um projeto React que utiliza uma API de filmes para listar informações sobre diferentes filmes. A aplicação exibe títulos, descrições e imagens dos filmes de forma dinâmica, proporcionando aos usuários uma plataforma interativa para explorar uma ampla variedade de conteúdo cinematográfico.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tecnologias Utilizadas: React, API de Filmes.
+
+Desenvolvedor: [João](https://github.com/Jaumjoao)
