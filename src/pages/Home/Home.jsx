@@ -2,13 +2,19 @@ import { useEffect, useState } from "react";
 import { MovieService } from "../../api/MovieService";
 import { MovieCard } from "../../components/MovieCard/MovieCard";
 
-export const Home = () => {
+export const Home = ({searchValueProp}) => {
     const [movies, setMovies] = useState([]);
 
     async function getMovies() {
-        MovieService.getMovies()
+        const { data: { results }, } = await MovieService.getMovies();
 
-        const { data: { results } } = await MovieService.getMovies();
+        setMovies(results);
+    }
+
+    async function getMoviesSearch(movieString) {
+        const { 
+            data: { results }, 
+        } = await MovieService.searchMovies(movieString);
 
         setMovies(results);
     }
@@ -18,14 +24,20 @@ export const Home = () => {
     }, []);
 
     useEffect(() => {
-        console.log(movies)
-    });
+        if (searchValueProp){
+            getMoviesSearch(searchValueProp);
+        }
+        if (searchValueProp === ''){
+            getMovies();
+        }
+    }, [searchValueProp]);
+
 
     return (
         <section className="Home">
-            {movies.map((item) => (
-                <div key={item.id}>
-                    <MovieCard movieProp={item}/>
+            {movies.map((movie) => (
+                <div key={movie.id}>
+                    <MovieCard movieProp={movie}/>
                 </div>
             ))}
         </section>
