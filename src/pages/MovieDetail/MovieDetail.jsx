@@ -30,16 +30,16 @@ export const MovieDetail = () =>{
                 <div className="MovieDetail__col">
                     <div className="MovieDetail__details">
                         <div className="MovieDetail__detail">
-                            <span>Budger:</span> {movie.budget}
+                            <span>Orçamento:</span> {movie.budget}
                         </div>
                         <div className="MovieDetail__detail">
-                            <span>Original Language:</span> {movie.original_language}
+                            <span>Linguagem Original:</span> {movie.original_language}
                         </div>
                         <div className="MovieDetail__detail">
-                            <span>Popularity:</span> {movie.popularity}
+                            <span>Popularidade:</span> {movie.popularity}
                         </div>
                         <div className="MovieDetail__detail">
-                            <span>Overview:</span> {movie.overview}
+                            <span>Visão geral:</span> {movie.overview}
                         </div>
                     </div>
                     <Link to={'/'} className="MovieDetail__button">
